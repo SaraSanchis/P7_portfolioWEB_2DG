@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 32px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-family: var(--cardo);
+            text-transform: uppercase;
+            color: var(--amarillo_claro);
+            box-shadow: var(--rosa) 0px 0px 8px;
+            padding: 1.2%;
+        }
+        a:hover {
+        background-color: #80150b;
+        }
+        :root{
+            --azul: #B3CFCD;
+            --naranja: #E9A431;
+            --gris: #e5e5e5;
+            --rojo: #D83C2D;
+            --amarillo_claro:#F9E9D1; 
+            --negrita: 700;
+            --lato: 'lato', sans-serif;
+            --negrita: 700;
+        }
+        .container{
+            padding: 0 2em;
+        }
+        body>header{
+            display: flex;
+            padding: 50px 0;
+            text-align: center;
+            height: 100vh;
+            background-color: var(--azul);
+        }
+        header .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+        }
+        hgroup{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            padding: 0.5%;
+        }
+        h1{
+            font-size: 7em;
+            margin:0 0 0em 0;
+            font-family: var(--lato);
+            font-weight: var(--negrita);
+            color:var(--rojo);
+        }
+        h2{
+            font-size: 0.8em;
+            margin: 0 0 3em 0;;
+            font-family: var(--lato);
+            color: var(--rojo);
+            width: 50%;
+        }
+        h3{
+            font-family: var(--cardo);
+            display:flex;
+            justify-content: center;
+            padding: 0.2em;
+            margin: 0em 0 0 0;
+            font-size: 0.8em;
+        }
+        h4{
+            font-family: var(--cardo);
+            display:flex;
+            justify-content: center;
+            font-size: 0.6em;
+            background-color: #f780003d;
+            color: white;
+        }
+        h5{
+            font-family: var(--cardo);
+            font-size: 0.5em;
+            color: var(--azul);
+        }
+        h6{
+            font-family: var(--cardo);
+            display:flex;
+            justify-content: center;
+            padding: 0.5em 0 0.5em 0;
+            font-size: 1.2em;
+            color: white;
+            font-weight: var(--negrita);
+        }
+        nav{
+            display: flex;
+            padding: 1em 2em;
+            width: 100%;
+            justify-content: space-between;
+        }
+        nav a{
+            font-size: 0.75em;
+            color:white;
+        }
+        section:first-child .container{
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            background-color:var(--amarillo_claro);
+            padding: 1em;
+            color: white;
+        }
+        section:last-child .container{
+            display: flex;
+            flex-wrap: wrap;
+            color: white;
+            justify-content: center;
+        }
+        section:last-child header{
+            width: 100%;
+        }
+        .cover{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-grow: 1;
+            min-width: 250px;
+            max-width: 500px;
+            min-height: 350px;
+            padding: 0.5em;
+            margin: 0.3em;
+            background-color: var(--amarillo_claro);
+            border-radius: 5%;
+            box-shadow: var(--azul) 0px 0px 8px;
+        }
+        .cover .cover_img{
+            display: flex;
+            width: 70%;
+            height: 260px;
+        }
+        .cover .cover_img img{
+            object-fit: cover;
+            object-position: bottom;
+        }
+        .cover header{
+            width: 80%;
+            background-color:var(--azul);
+            display: flex;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+        .cover h3{
+            font-family: var(--cardo);
+            font-size: 0.5em;
+            color: white;
+        }
+        .cover :hover {
+        background-color: var(--naranja);
+        }
+        #Alumna {
+            background-color: var(--amarillo_claro);
+        }
+        .card_Alumna{
+            display: flex;
+            flex-direction:row;
+            justify-content: center;
+            flex-grow: 1;
+            padding: 4em;
+        }
+        .Alumna_img{
+            width: 500px;
+            height: 250px;
+        }
+        .Alumna_img img{
+            border-radius: 250px;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+        }
+        .card_Alumna header{
+            margin: 0.75em 0 0 0;
+            text-align: center;
+            padding: 0.5em;
+            background-color: var(--azul);
+        }
+        section:last-child{
+            height: 100%;
+            color: white;
+            background-color: var(--naranja);
+            align-items: center;
+            justify-content: end;
+        }
+        .grupo1{
+            display: flex;
+            flex-direction: row;
+        }
+        .grupo2{
+            display: flex;
+            flex-direction: row;
+        }
+        footer{
+            height: 50vh;
+            background-color: var(--azul);
+            color: black;
+        }
+        footer .container{
+            display: flex;
+
+        }
+        footer p{
+            width: 20%;
+        }
+        footer p:last-child{
+            margin-left: 3%;
+        }
+
+        footer p a{
+            font-family: var(--cardo);
+            font-size: 0.6em;
+            align-items:flex-end;
+        }
+        footer a:hover {
+        color:var(--amarillo);
+        background-color: #c26c4d;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        /*TAMAÑOS*/
+        @media (max-width:1024px){
+            html{
+                font-size:20px;
+            }
+            section:first-child .container{
+                flex-direction: column;
+            }
+            h1{
+            font-size: 7em;
+            font-family: var(--lato);
+            font-weight: var(--negrita);
+            color:var(--rojo);
+            } 
+            .cover{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-grow: 1;
+            min-width: 250px;
+            max-width: 500px;
+            min-height: 350px;
+            padding: 0.5em;
+            margin: 0.3em;
+            background-color: var(--amarillo_claro);
+            border-radius: 5%;
+            box-shadow: var(--azul) 0px 0px 8px;
+            }
+            .card_Alumna{
+                display: flex;
+                flex-direction:row;
+                justify-content: center;
+                flex-grow: 1;
+                padding: 0.75em;
+            }
+            .grupo1{
+            display: flex;
+            flex-direction: column;
+        }
+            .grupo2{
+            display: flex;
+            flex-direction: column;
+        }
+        @media (max-width:640px){
+            .cover{
+                display: flex;
+                align-items: center;
+                width: 500px;
+                height: 450px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-grow: 1;
+            }
+            .card_Alumna{
+                display: flex;
+                flex-direction:column;
+                justify-content: center;
+                flex-grow: 1;
+                padding: 0.75em;
+            }
+            .grupo1{
+            display: flex;
+            flex-direction: column;
+        }
+            .grupo2{
+            display: flex;
+            flex-direction: column;
+        }
+        .cover{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-grow: 1;
+            min-width: 250px;
+            max-width: 250px;
+            min-height: 350px;
+            padding: 0.5em;
+            margin: 0.3em;
+            background-color: var(--amarillo_claro);
+            border-radius: 5%;
+            box-shadow: var(--azul) 0px 0px 8px;
+            }
+        }
+    </style>
+</head>
+<link rel="icon" href="img/icon_logo.png"
+<body>
+    <header>
+        <div class="container">
+            <hgroup>
+                <h1>Portfolio</h1>
+                <h2>Sara Maria Sanchis Albert</h2>
+            </hgroup>
+            <nav>
+                <a href="#Alumna">Alumna</a>
+                <a href="#Trabajos">Trabajos</a>
+                <a href="#xxss">RRSS</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+            <section id="Alumna">
+                <div class="card_Alumna">
+                    <div class="Alumna_img">
+                        <img src="img/_MG_4775.JPG" alt="">
+                    </div>
+                    <header>
+                        <h6>Sara Sanchis</h6>
+                        <blockquote>
+                            <h3>“Alumna de 2º de diseño gráfico en la EASD Alcoi. He realizado esta pagina web para mostrar la serie de trabajos que he realizado durante el año escolar.”</h3>
+                        </blockquote>
+                        <blockquote>
+                            <h6>Sistemas de representación</h6>
+                        </blockquote>
+                    </header>
+                </div>
+            </section>
+            <section id="Trabajos">
+                <header>
+                    <h6>Trabajos</h6>
+                </header>
+                    <div class="container">
+                        <div class="grupo1">
+                            <div class="cover">
+                                <div class="cover_img">
+                                    <img src="img/1.png" alt="">
+                                </div>
+                                <header>
+                                    <p><a href="https://sarasanchis.github.io/1_llocweb_2dg/"><h3>P1_llocweb_2DG</h3></a></p>
+                                </header>
+                            </div>
+                            <div class="cover">
+                                <div class="cover_img">
+                                    <img src="img/2.png" alt="">
+                                </div>
+                                <header>
+                                    <p><a href="https://sarasanchis.github.io/2p_llocweb_img/"><h3>P2_llocweb_img_2DG</h3></a></p>
+                                </header>
+                            </div>
+                            <div class="cover">
+                                <div class="cover_img">
+                                    <img src="img/3.png" alt="">
+                                </div>
+                                <header>
+                                    <p><a href="https://sarasanchis.github.io/p3_img_video_audio/"><h3>P3_img_video_audio_2DG</h3></a></p>
+                                </header>
+                            </div>
+                        </div>    
+                        <div class="grupo2">
+                                <div class="cover">
+                                    <div class="cover_img">
+                                        <img src="img/4.png" alt="">
+                                    </div>
+                                    <header>
+                                        <p><a href="https://sarasanchis.github.io/p4_gallery_2DG/"><h3>P4_gallery_2DG</h3></a></p>
+                                    </header>
+                                </div>
+                                <div class="cover">
+                                    <div class="cover_img">
+                                        <img src="img/5.png" alt="">
+                                    </div>
+                                    <header>
+                                        <p><a href="https://sarasanchis.github.io/p5_GRID_2dg/"><h3>P5_GRID_2DG</h3></a></p>
+                                    </header>
+                                </div>
+                                <div class="cover">
+                                    <div class="cover_img">
+                                        <img src="img/6.png" alt="">
+                                    </div>
+                                    <header>
+                                        <p><a href="https://sarasanchis.github.io/p6_grid_neoplasticista_2DG/"><h3>P6_neoplasticista_2DG</h3></a></p>
+                                    </header>
+                                </div> 
+                        </div>
+                        </div>
+                    </section>
+    </main>
+    <footer id="xxss">
+            <h6>Redes sociales</h6>
+            <div class="container">
+                <p><a href="https://twitter.com/HIYUMII1"><h5>Twitter</h5></a></p>
+                <p><a href="https://www.instagram.com/hiyumii/?hl=es"><h5>Instagram</h5></a></p>
+                <p><a href="https://www.tiktok.com/@hiyumiime?lang=es"><h5>Tiktok</h5></a></p>
+                <p><a href="https://www.youtube.com/channel/UClBKPXrh6YRtHbfpuxOvBCw?view_as=subscriber"><h5>Youtube</h5></a></p>
+            </div>
+    </footer>
+</body>
+</html>
